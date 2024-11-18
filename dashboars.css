@@ -74,6 +74,7 @@ header nav a {
   /* height: 100vh; */
   display: flex;
   justify-content: center;
+  gap: 20px;
   align-items: center;
 }
 
@@ -107,20 +108,6 @@ header nav a {
   width: 300px;
 }
 
-.get-weather-btn {
-  padding: 5px 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: #fff;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.get-weather-btn:hover {
-  background-color: #3e8e41;
-}
 
 .sensor-container {
     display: flex;

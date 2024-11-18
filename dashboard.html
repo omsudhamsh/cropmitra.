@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +50,7 @@
         }
     
         function handleLocationInput() {
-            const location = document.getElementById("cityInput").value.trim();
+            const location = document.getElementById("input-field").value.trim();
             console.log("Location entered:", location);
             if (location) {
                 fetchWeatherData(location);
@@ -82,6 +81,26 @@
   <main>
     <div class="greeting">
       <p>Greetings, <span id="username">@user</span>! | 📍 <span id="location">currentLocation</span></p>
+    </div>
+    <div class="location-input-container" style="margin: 20px 0;">
+      <input type="text" id="input-field" placeholder="Enter village/city" style="padding: 8px; 
+                                                                                  width: 200px; 
+                                                                                  border-radius: 5px; 
+                                                                                  border: 1px solid #ccc;
+                                                                                  font-size: large;">
+      <button onclick="handleLocationInput()" 
+      style="padding: 8px 12px; 
+             border: none; 
+             background-color: hsl(134, 61%, 41%); /* original green */
+             color: white; 
+             border-radius: 5px; 
+             cursor: pointer;
+             font-size: large;"
+      onmouseover="this.style.backgroundColor='hsl(134, 61%, 31%)'"
+      onmouseout="this.style.backgroundColor='hsl(134, 61%, 41%)'">
+  Fetch
+</button>
+
     </div>
     <div class="sensor-container">
       <div class="sensor-box">

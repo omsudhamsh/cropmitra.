@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="leaf.png">
+<title>CropMitra - Sign In</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+<script>
+function login() {
+  const username = document.getElementById("username").value;
+  const location = document.getElementById("location").value;
+  if (username && location) {
+    // Store username and location in local storage
+    localStorage.setItem("username", username);
+    localStorage.setItem("location", location);
+    // Redirect to dashboard
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Please enter both username and location.");
+  }
+}
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <h1>CropMitra <span class="leaf">🌿</span></h1>
+      <p id="firstPara"><b>Empowering Farmers with </b><span class="highlight"><i>Real-Time Data</i></span> <b>with Smart Irrigation</b></p>
+      <!-- <p id="secondPara" style="display: none;"><b>సాంకేతిక పరిజ్ఞానంతో సన్నద్ధమైన సాగు</b></p> -->
+  </div>
+    <div class="right-section">
+      <h2>Sign in</h2>
+      <form onsubmit="login(); return false;">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="text" id="location" placeholder="Location" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Sign in</button>
+        <div class="links">
+          <p>Forget password? <a href="#" ><span>Reset</span></a> </p>
+          <p>Don't have an account? <a href="#" ><span>Sign Up</span></a> </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

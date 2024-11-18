@@ -1,121 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montaga&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montaga&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Product sans";
-  }
-  
-  body {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
     background-color: #d4f8d4;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('leaves-7396788_1920.jpg');
-    /* background-image: url('bgimg1.jpg'); */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the image */
+    background-image: url('fields-4765322_1920.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     gap: 100px;
     padding: 50px;
-  }
-  
-  .left-section, .right-section {
-    max-width: 300px;
-  }
-  
-  /* Header */
-  header {
-    position: relative; /* Set position to relative */
+}
+
+header {
+    position: relative;
     padding: 15px;
-    color: white; /* Change text color for better visibility */
-    z-index: 1; /* Ensure content is above the pseudo-element */
-  }
-  
-  header::before {
-    content: ''; /* Required for pseudo-elements */
-    position: absolute; /* Position it absolutely */
+    color: white;
+    z-index: 1;
+}
+
+header::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    backdrop-filter: blur(34px); /* Apply blur effect */
-    z-index: -1; /* Send it behind the header content */
-  }
-  
-  .header-content {
+    backdrop-filter: blur(34px);
+    z-index: -1;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .header-content h1 {
+}
+
+.header-content h1 {
     font-size: 2em;
-    color:#a8cfa8;
-  }
-  
-  header nav a {
+    color: #a8cfa8;
+}
+
+header nav a {
     margin: 0 10px;
-    color: #a8cfa8  ;
+    color: #a8cfa8;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
-  }
-  
-  .user-icon {
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  /* Greeting Section */
-  .greeting {
+}
+
+.greeting {
     text-align: center;
     margin-top: 20px;
     font-size: 24px;
     color: #d4f8d4;
-    font-family: "Poppins", sans-serif;
-    /* background: rgba(255, 255, 255, 0.2); Adjust the rgba values for desired transparency
-    border-radius: 10px; Rounded corners
-    padding: 20px; Add some padding
-    backdrop-filter: blur(10px); Adjust the blur amount
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  */
-  }
-  
-  /* Sensor Data Boxes */
-  .sensor-container {
+}
+
+.location-input-container {
+  /* background-image: url('https://picsum.photos/200/300?blur'); */
+  background-size: cover;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glassmorphism Effect */
+
+.glassmorphism {
+  /* background: rgba(27, 26, 27, 0.4); */
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.input-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  padding: 8px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.get-weather-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.get-weather-btn:hover {
+  background-color: #3e8e41;
+}
+
+.sensor-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
-  }
-  
-  .sensor-box {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Apply blur effect */
-    border-radius: 8px; /* Optional: rounded corners */
-    padding: 20px; /* Optional: padding for content */
-    margin: 10px; /* Optional: spacing between boxes */
-  }
-  
-  .sensor-box h3 {
+}
+
+.sensor-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.sensor-box h3 {
     font-size: 1.2em;
     color: #333;
-  }
-  
-  .sensor-box p {
+}
+
+.sensor-box p {
     font-size: 1.5em;
     margin-top: 10px;
-    font-family: 'Produce sans', sans-serif;
-  }
-  
-  /* Footer */
-  footer {
+}
+
+footer {
     margin-top: auto;
     text-align: center;
     padding: 15px;
@@ -133,66 +165,101 @@ footer::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: inherit; /* Use the same background color */
-    filter: blur(10px); /* Adjust the blur amount as needed */
-    z-index: -1; /* Place it behind the footer content */
+    background-color: inherit;
+    filter: blur(10px);
+    z-index: -1;
 }
-  
 
-  /* Toggle Switch Styles */
-.toggle-container {
+@media (max-width: 768px) {
+    .sensor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #d4f8d4;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('leaves-7396788_1920.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 15px;
+}
+
+.header-content h1 {
+  font-size: 2em;
+  color: #a8cfa8;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: #a8cfa8;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.greeting {
+  text-align: center;
   margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
 }
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+.sensor-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.sensor-box {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 150px;
+  text-align: center;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #136916; /* Change color when checked */
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px); /* Move the slider */
-}
-
-.toggle-label {
-  margin-left: 10px;
+.sensor-box h3 {
   font-size: 1.2em;
   color: #333;
 }
+
+.sensor-box p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #a8cfa8;
+  font-size: 14px;
+  font-weight: 600;
+} */

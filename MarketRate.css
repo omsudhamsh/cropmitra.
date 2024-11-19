@@ -17,6 +17,23 @@ h1 {
   margin: 0;
 }
 
+.crop-info {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.crop-info h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.crop-info p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
 table {
   width: 80%;
   margin: 20px auto;

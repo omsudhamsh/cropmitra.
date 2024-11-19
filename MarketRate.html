@@ -5,42 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crop Price Information</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
     <h1>Crop Price and Information</h1>
   </header>
+
   <main>
-    <div class="crop-container">
-      <h2>Crop Prices in India</h2>
-      <div class="crop-box" id="paddy-box">
-        <h3>Paddy</h3>
-        <p><strong>Expected Price: ₹1850 per Quintal</strong></p>
-        <p>Paddy is one of the most widely grown crops in India, essential for food security. The price can vary based on the region and market conditions.</p>
-      </div>
-      <div class="crop-box" id="cotton-box">
-        <h3>Cotton</h3>
-        <p><strong>Expected Price: ₹6200 per Quintal</strong></p>
-        <p>Cotton is a key cash crop in India. The price fluctuates based on demand from textile industries and international market trends.</p>
-      </div>
-      <div class="crop-box" id="maize-box">
-        <h3>Maize</h3>
-        <p><strong>Expected Price: ₹2000 per Quintal</strong></p>
-        <p>Maize is used both for food and fodder. Prices can vary based on the harvest season and availability in the market.</p>
-      </div>
-      <div class="crop-box" id="jowar-box">
-        <h3>Jowar</h3>
-        <p><strong>Expected Price: ₹2500 per Quintal</strong></p>
-        <p>Jowar is an important crop in dry regions of India, with prices varying based on production and demand in the agricultural markets.</p>
-      </div>
-      <div class="crop-box" id="peanut-box">
-        <h3>Peanut</h3>
-        <p><strong>Expected Price: ₹5500 per Quintal</strong></p>
-        <p>Peanut is a crucial oilseed crop grown mainly in southern and western India. Prices depend on weather patterns and international demand.</p>
-      </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Crop Name</th>
+            <th>Price per Quintal (INR)</th>
+            <th>Information</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paddy</td>
+            <td>₹1850</td>
+            <td>Paddy is one of the most widely grown crops in India, essential for food security. The price can vary based on the region and market conditions.</td>
+          </tr>
+          <tr>
+            <td>Cotton</td>
+            <td>₹6200</td>
+            <td>Cotton is a key cash crop in India. The price fluctuates based on demand from textile industries and international market trends.</td>
+          </tr>
+          <tr>
+            <td>Maize</td>
+            <td>₹2000</td>
+            <td>Maize is used both for food and fodder. Prices can vary based on the harvest season and availability in the market.</td>
+          </tr>
+          <tr>
+            <td>Jowar</td>
+            <td>₹2500</td>
+            <td>Jowar is an important crop in dry regions of India, with prices varying based on production and demand in the agricultural markets.</td>
+          </tr>
+          <tr>
+            <td>Peanut</td>
+            <td>₹5500</td>
+            <td>Peanut is a crucial oilseed crop grown mainly in southern and western India. Prices depend on weather patterns and international demand.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </main>
+
   <footer>
     <p>© CropMitra Price Information</p>
   </footer>

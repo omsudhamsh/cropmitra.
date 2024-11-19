@@ -14,5 +14,5 @@ const cropPrices = {
     document.getElementById("peanut-price").innerText = `₹${cropPrices.peanut}`;
   }
   
-  window.onload = displayCropPrices;
+  window.onload = displayCropPricess;
   

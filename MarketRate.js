@@ -1,30 +1,18 @@
-async function fetchMarketRates() {
-    const apiUrl = "https://api.example.com/market-rates"; // Replace with actual API URL
-    try {
-      const response = await fetch(apiUrl);
-      if (!response.ok) throw new Error("Failed to fetch data");
+const cropPrices = {
+    paddy: 1850,
+    cotton: 6200,
+    maize: 2000,
+    jowar: 2500,
+    peanut: 5500,
+  };
   
-      const data = await response.json();
-      const tableBody = document.getElementById("market-data");
-  
-      // Example crop data structure: [{ crop: "Paddy", price: 25, action: "Hold" }]
-      tableBody.innerHTML = data.map(crop => `
-        <tr>
-          <td>${crop.crop}</td>
-          <td>₹${crop.price}</td>
-          <td>${crop.action}</td>
-        </tr>
-      `).join("");
-    } catch (error) {
-      console.error("Error fetching market rates:", error);
-      document.getElementById("market-data").innerHTML = `
-        <tr>
-          <td colspan="3">Unable to fetch market rates at the moment.</td>
-        </tr>
-      `;
-    }
+  function displayCropPrices() {
+    document.getElementById("paddy-price").innerText = `₹${cropPrices.paddy}`;
+    document.getElementById("cotton-price").innerText = `₹${cropPrices.cotton}`;
+    document.getElementById("maize-price").innerText = `₹${cropPrices.maize}`;
+    document.getElementById("jowar-price").innerText = `₹${cropPrices.jowar}`;
+    document.getElementById("peanut-price").innerText = `₹${cropPrices.peanut}`;
   }
   
-  // Fetch data when the page loads
-  window.onload = fetchMarketRates;
+  window.onload = displayCropPrices;
   

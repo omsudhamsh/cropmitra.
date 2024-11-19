@@ -3,29 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crop Price Prediction</title>
+  <title>Crop Price Information</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <h1>Crop Price Prediction</h1>
+    <h1>Crop Price Information</h1>
   </header>
   <main>
-    <div class="market-container">
-      <h2>Real-Time Market Rates (INR)</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Crop</th>
-            <th>Current Price (₹/kg)</th>
-            <th>Suggested Action</th>
-          </tr>
-        </thead>
-        <tbody id="market-data">
-          <!-- Data will be inserted here by JavaScript -->
-        </tbody>
-      </table>
+    <div class="crop-container">
+      <h2>Current Prices (₹ per Quintal)</h2>
+      <div class="crop-box" id="paddy-box">
+        <h3>Paddy</h3>
+        <p id="paddy-price">Loading...</p>
+      </div>
+      <div class="crop-box" id="cotton-box">
+        <h3>Cotton</h3>
+        <p id="cotton-price">Loading...</p>
+      </div>
+      <div class="crop-box" id="maize-box">
+        <h3>Maize</h3>
+        <p id="maize-price">Loading...</p>
+      </div>
+      <div class="crop-box" id="jowar-box">
+        <h3>Jowar</h3>
+        <p id="jowar-price">Loading...</p>
+      </div>
+      <div class="crop-box" id="peanut-box">
+        <h3>Peanut</h3>
+        <p id="peanut-price">Loading...</p>
+      </div>
     </div>
   </main>
   <footer>
